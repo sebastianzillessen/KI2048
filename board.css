@@ -1,0 +1,41 @@
+#board {
+    width: 402px;
+    height: 402px;
+    border: thin solid black;
+    box-sizing: border-box;
+}
+
+#board .tile {
+    width: 100px;
+    height: 100px;
+    float: left;
+    border: thin solid grey;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-align: center;
+    background-color: white;
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+#board .tile.val-0 {
+
+}
+#board .tile.val-2{background-color: lightgray;}
+#board .tile.val-4{background-color: rosybrown;}
+#board .tile.val-8{background-color: sandybrown;}
+#board .tile.val-16{background-color: orchid;}
+#board .tile.val-32{background-color: orangered;}
+#board .tile.val-64{background-color: mediumvioletred;}
+#board .tile.val-128{background-color: lightgoldenrodyellow;}
+#board .tile.val-256{background-color: yellow;}
+#board .tile.val-512{background-color: darkgoldenrod;}
+#board .tile.val-1024{background-color: #8F6F00;}
+#board .tile.val-2048{background-color: #9F5F00;}
+#board .tile.val-4096{background-color: darkgray;}
+#board .tile.val-8192{background-color: saddlebrown;}
+#board .tile.val-16384{background-color: black;}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KI 2048</title>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="js/board.js"></script>
+  <script src="js/ki.js"></script>
+  <link rel="stylesheet" type="text/css" href="board.css">
+
+</head>
+<body>
+<div id="board"></div>
+<button onclick="board.move(0)">down</button>
+<button onclick="board.move(1)">up</button>
+<button onclick="board.move(2)">left</button>
+<button onclick="board.move(3)">right</button>
+<script>
+  var board = new Board();
+  board.show();
+
+  document.addEventListener("keydown", keyDownTextField, false);
+  var ki = new KI(board);
+
+  function keyDownTextField(e) {
+    var keyCode = e.keyCode;
+    switch (keyCode) {
+      case 37:
+        board.move(2);
+        break;
+      case 38:
+        board.move(1);
+        break;
+      case 39:
+        board.move(3);
+        break;
+      case 40:
+        board.move(0);
+        break;
+      case 220:
+        ki.minMax(ki.board, 5, -9999999999, 9999999999, true, 5);
+
+        break;
+      default:
+        console.log("Unkown key " + keyCode);
+    }
+  }
+
+</script>
+</body>
+</html>
